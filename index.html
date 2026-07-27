@@ -465,17 +465,6 @@
             box-shadow: 0 0 10px var(--accent-glow);
         }
 
-        .form-success {
-            display: none;
-            background: rgba(16, 185, 129, 0.15);
-            border: 1px solid #10b981;
-            color: #34d399;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 500;
-        }
-
         /* Footer */
         footer {
             text-align: center;
@@ -843,7 +832,7 @@
         </div>
     </section>
 
-    <!-- Dynamic Contact Section -->
+    <!-- Direct Mail Contact Section -->
     <section id="contact">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Get in touch for opportunities, tech support, and collaborations</p>
@@ -873,8 +862,8 @@
                 </div>
             </div>
 
+            <!-- Form configured to send directly via mailto link -->
             <form class="contact-form" id="contactForm">
-                <div class="form-success" id="formSuccess">Thank you! Your message has been sent successfully.</div>
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" required placeholder="Enter your full name">
@@ -887,14 +876,14 @@
                     <label for="message">Your Message</label>
                     <textarea id="message" rows="4" required placeholder="Write your message here..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message Directly</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Copyright © 2026 Roshan Bhattarai. All rights reserved.</p>
+        <p>Copyright © 2024 Roshan Bhattarai. All rights reserved.</p>
     </footer>
 
     <!-- Dynamic Client-Side JavaScript -->
@@ -939,18 +928,21 @@
             });
         });
 
-        // Dynamic Form Submission Handling
+        // Direct Email Client Trigger on Form Submit
         const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('formSuccess');
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            formSuccess.style.display = 'block';
-            contactForm.reset();
             
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-            }, 5000);
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const recipientEmail = 'unikguru123@gmail.com';
+            const subject = encodeURIComponent(`Portfolio Message from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
         });
 
         // Active Link Highlight on Scroll
