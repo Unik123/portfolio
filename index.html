@@ -700,16 +700,17 @@
     <!-- Technical Skills & Expertise -->
     <section id="skills">
         <h2 class="section-title">Technical Expertise & Skills</h2>
-        <p class="section-subtitle">Core competencies and system tool proficiency</p>
+        <p class="section-subtitle">Core competencies, tools, and language proficiency</p>
 
-        <div class="grid-2">
+        <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Part 1: Core IT & Management Skills -->
             <div class="card">
                 <h3><i class="fa-solid fa-server"></i> Core IT & Management Skills</h3>
                 <div class="skills-container">
                     <span class="skill-tag">System Administration</span>
                     <span class="skill-tag">IT Infrastructure Management</span>
                     <span class="skill-tag">Technical Support</span>
-                    <span class="skill-tag">Database Management</span>
                     <span class="skill-tag">IT Operations</span>
                     <span class="skill-tag">Hardware & Software Maintenance</span>
                     <span class="skill-tag">Team Leadership</span>
@@ -718,22 +719,34 @@
                 </div>
             </div>
 
+            <!-- Part 2: Databases & Tools -->
             <div class="card">
-                <h3><i class="fa-solid fa-code"></i> Databases & Tools</h3>
-                <div class="skills-container" style="margin-bottom: 1.5rem;">
+                <h3><i class="fa-solid fa-database"></i> Databases & Tools</h3>
+                <div class="skills-container">
                     <span class="skill-tag">SQL Server</span>
                     <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">Microsoft Office</span>
                     <span class="skill-tag">System Maintenance</span>
                     <span class="skill-tag">User Support</span>
                 </div>
-                <h3><i class="fa-solid fa-language"></i> Languages</h3>
-                <p style="color: var(--text-secondary); margin-top: 0.5rem;">
-                    <strong>Nepali:</strong> Read, Write, Speak<br>
-                    <strong>English:</strong> Read, Write, Speak<br>
-                    <strong>Hindi:</strong> Read, Speak
-                </p>
             </div>
+
+            <!-- Part 3: Languages -->
+            <div class="card">
+                <h3><i class="fa-solid fa-language"></i> Languages</h3>
+                <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem; color: var(--text-secondary);">
+                    <div>
+                        <strong style="color: var(--text-primary);">Nepali:</strong> Read, Write, Speak
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">English:</strong> Read, Write, Speak
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">Hindi:</strong> Read, Speak
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
