@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roshan Bhattarai | IT Professional, System Administrator & Corporate Owner</title>
+    <title>Roshan Bhattarai | IT Professional & System Administrator</title>
     <!-- Google Fonts & FontAwesome for modern icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -64,7 +64,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.8rem;
             list-style: none;
         }
 
@@ -98,7 +98,7 @@
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
             margin-bottom: 1rem;
             line-height: 1.2;
@@ -149,8 +149,8 @@
         }
 
         .hero-image img {
-            width: 320px;
-            height: 320px;
+            width: 300px;
+            height: 300px;
             object-fit: cover;
             border-radius: 50%;
             border: 4px solid var(--accent);
@@ -177,11 +177,11 @@
             margin-bottom: 3rem;
         }
 
-        /* About & Corporate Leadership */
+        /* Grid Layouts */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 2.5rem;
             align-items: start;
         }
 
@@ -191,6 +191,7 @@
             padding: 2.5rem;
             border-radius: 16px;
             transition: var(--transition);
+            height: 100%;
         }
 
         .card:hover {
@@ -199,15 +200,33 @@
         }
 
         .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
             color: var(--accent);
             display: flex;
             align-items: center;
             gap: 0.8rem;
         }
 
-        /* Timeline / Involvements */
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--accent-glow);
+            color: var(--accent);
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        /* Timeline / Experience */
         .timeline {
             display: flex;
             flex-direction: column;
@@ -217,20 +236,43 @@
         .timeline-item {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 12px;
             border-left: 4px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
         }
 
         .timeline-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
         }
 
-        .timeline-item span {
+        .timeline-company {
             color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .timeline-item ul {
+            list-style-type: disc;
+            margin-left: 1.2rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
         }
 
         /* Projects Grid */
@@ -244,23 +286,16 @@
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
-            overflow: hidden;
+            padding: 2rem;
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .project-info {
-            padding: 1.5rem;
         }
 
         .project-tag {
@@ -270,13 +305,18 @@
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             display: inline-block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             font-weight: 600;
         }
 
-        .project-info h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        .project-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
         /* Contact Section */
@@ -295,7 +335,7 @@
         }
 
         .contact-card i {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--accent);
             margin-bottom: 1rem;
         }
@@ -307,6 +347,7 @@
         .contact-card p, .contact-card a {
             color: var(--text-secondary);
             text-decoration: none;
+            word-break: break-all;
         }
 
         .contact-card a:hover {
@@ -331,7 +372,7 @@
                 padding-top: 8rem;
             }
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
             .btn-group {
                 justify-content: center;
@@ -340,7 +381,7 @@
                 grid-template-columns: 1fr;
             }
             .nav-links {
-                display: none; /* Can add mobile toggle JS later if needed */
+                display: none;
             }
         }
     </style>
@@ -353,9 +394,10 @@
             <a href="#" class="logo">Roshan Bhattarai</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#corporate">Corporate & Leadership</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#involvements">Involvements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -366,159 +408,277 @@
         <div class="hero-content">
             <h2>Hi, I'm Roshan Bhattarai 👋</h2>
             <h1>IT Professional & Corporate Owner</h1>
-            <p>Bridging the gap between advanced IT systems administration, software development, and strategic corporate leadership to drive organizational excellence.</p>
+            <p>IT Professional with a BCA degree, specializing in System Administration, IT Operations, Examination Management, and institutional technology leadership[cite: 1].</p>
             <div class="btn-group">
-                <a href="#projects" class="btn btn-primary">Explore My Work</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
         </div>
         <div class="hero-image">
-            <!-- Replace 'IMG_3495.JPG' with your profile image filename -->
             <img src="IMG_3495.JPG" alt="Roshan Bhattarai">
         </div>
     </section>
 
-    <!-- About & Expertise -->
+    <!-- About & Education -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Who I am and what drives my work</p>
+        <h2 class="section-title">About Me & Education</h2>
+        <p class="section-subtitle">Academic background and professional profile</p>
         
         <div class="grid-2">
             <div class="card">
                 <h3><i class="fa-solid fa-user-tie"></i> Professional Profile</h3>
-                <p>I am an IT student and master of communication, turning complex technical ideas into clear, actionable strategies that fuel collaboration and innovation. With expertise in web development, software engineering, and systems administration, I craft cutting-edge digital solutions and optimize enterprise IT infrastructures.</p>
+                <p>Experienced in managing IT infrastructure, supporting academic and administrative systems, and leading technology initiatives across educational institutions and corporate organizations[cite: 1]. Proven expertise in public speaking, event management, and team leadership.</p>
             </div>
             <div class="card">
-                <h3><i class="fa-solid fa-microchip"></i> Core Technical Skills</h3>
-                <p><strong>Systems Administration:</strong> IT Infrastructure Optimization, Server Maintenance<br><br>
-                <strong>Development:</strong> Web Development, Desktop Application Development, Android App Development<br><br>
-                <strong>Soft Skills:</strong> Cross-functional Leadership, Team Collaboration, Strategic Communication</p>
+                <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
+                    <li>
+                        <strong style="color: var(--text-primary);">LA GRANDEE International College</strong><br>
+                        Bachelor in Computer Application (BCA) | 2019 - 2025[cite: 1]
+                    </li>
+                    <li>
+                        <strong style="color: var(--text-primary);">Sagarmatha Higher Secondary School</strong><br>
+                        +2 Management | 2017 - 2019[cite: 1]
+                    </li>
+                    <li>
+                        <strong style="color: var(--text-primary);">Sagarmatha Niketan School</strong><br>
+                        Secondary Education Examination (SEE) | 2016[cite: 1]
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Corporate Ownership & Leadership Section (New Dedicated Section) -->
-    <section id="corporate">
-        <h2 class="section-title">Corporate & Business Leadership</h2>
-        <p class="section-subtitle">Entrepreneurial ventures and corporate ownership</p>
+    <!-- Professional Experience -->
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">A track record of technical operations and administrative leadership</p>
 
-        <div class="grid-2">
-            <div class="card" style="border-color: var(--accent);">
-                <h3><i class="fa-solid fa-building"></i> Corporate Ownership</h3>
-                <p style="margin-bottom: 1rem;">As a corporate owner and entrepreneur, I manage business operations, direct technological implementation, and ensure strategic growth.</p>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-secondary);">
-                    <li><i class="fa-solid fa-check text-accent" style="color: var(--accent);"></i> <strong>Owner:</strong> Mama Bhanja Restaurant</li>
-                    <li><i class="fa-solid fa-check text-accent" style="color: var(--accent);"></i> <strong>Software Incharge & Finance Keeper:</strong> Gauri Nandan Glass House</li>
+        <div class="timeline">
+            <!-- Herald International College -->
+            <div class="timeline-item">
+                <h4>System Administrator / Examination Department Head</h4>
+                <div class="timeline-company">HERALD INTERNATIONAL COLLEGE</div>
+                <span class="timeline-date">August 3, 2025 - December 15, 2025[cite: 1]</span>
+                <ul>
+                    <li>Managed IT infrastructure and institutional systems[cite: 1].</li>
+                    <li>Administered examination systems and academic operations[cite: 1].</li>
+                    <li>Provided technical support to faculty, staff, and students[cite: 1].</li>
+                    <li>Coordinated technology requirements across departments[cite: 1].</li>
+                    <li>Social Media Management and Content Creation[cite: 1].</li>
                 </ul>
             </div>
 
-            <div class="card">
-                <h3><i class="fa-solid fa-chart-line"></i> Strategic & Operational Impact</h3>
-                <p>Combining my IT background with enterprise execution allows me to optimize operations from both a technical and financial standpoint. Whether managing restaurant infrastructure or retail-tech software systems, I bridge business acumen with technical execution.</p>
+            <!-- Urbana School of Science -->
+            <div class="timeline-item">
+                <h4>IT Department Head / Examination Department Head</h4>
+                <div class="timeline-company">URBANA SCHOOL OF SCIENCE</div>
+                <span class="timeline-date">February 1, 2025 - July 31, 2025[cite: 1]</span>
+                <ul>
+                    <li>Led IT operations and examination management[cite: 1].</li>
+                    <li>Implemented technology solutions to improve efficiency[cite: 1].</li>
+                    <li>Supervised institutional technology resources, Social Media Management and Content Creation[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Insoft Research & Development -->
+            <div class="timeline-item">
+                <h4>System Administrator</h4>
+                <div class="timeline-company">INSOFT RESEARCH & DEVELOPMENT</div>
+                <span class="timeline-date">October 1, 2023 - January 16, 2024[cite: 1]</span>
+                <ul>
+                    <li>Managed servers and user accounts[cite: 1].</li>
+                    <li>Performed system monitoring and maintenance[cite: 1].</li>
+                    <li>Provided technical support and troubleshooting[cite: 1].</li>
+                    <li>Data Tracking, Client Support and Administrative Operations[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Gauri Nandan Glass House -->
+            <div class="timeline-item">
+                <h4>Accounting Manager</h4>
+                <div class="timeline-company">GAURI NANDAN GLASS HOUSE</div>
+                <span class="timeline-date">January 1, 2023 - July 12, 2023[cite: 1]</span>
+                <ul>
+                    <li>Managed accounting operations and documentation[cite: 1].</li>
+                    <li>Assisted in administrative and financial management[cite: 1].</li>
+                    <li>Assisted on system auditing and data entry[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Vision Nepal -->
+            <div class="timeline-item">
+                <h4>Software Technician</h4>
+                <div class="timeline-company">VISION NEPAL</div>
+                <span class="timeline-date">April 1, 2022 - December 15, 2022[cite: 1]</span>
+                <ul>
+                    <li>Installed and maintained software systems[cite: 1].</li>
+                    <li>Resolved software-related technical issues[cite: 1].</li>
+                    <li>Delivered technical support to users[cite: 1].</li>
+                    <li>System management and Database Operations[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Macrotech Computech -->
+            <div class="timeline-item">
+                <h4>Software Technician</h4>
+                <div class="timeline-company">MACROTECH COMPUTECH</div>
+                <span class="timeline-date">February 1, 2019 - March 10, 2022[cite: 1]</span>
+                <ul>
+                    <li>Supported software deployment and configuration[cite: 1].</li>
+                    <li>Assisted clients with troubleshooting and maintenance[cite: 1].</li>
+                    <li>System management and Database Operations[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Rotaract District 3292 -->
+            <div class="timeline-item">
+                <h4>IT Officer</h4>
+                <div class="timeline-company">ROTARACT DISTRICT 3292</div>
+                <span class="timeline-date">2020 - 2021[cite: 1]</span>
+                <ul>
+                    <li>Managed digital platforms and IT operations[cite: 1].</li>
+                    <li>Supported district-wide technology initiatives[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Mama Bhanja Ghar -->
+            <div class="timeline-item">
+                <h4>Business Owner & Operations Manager</h4>
+                <div class="timeline-company">MAMA BHANJA GHAR</div>
+                <span class="timeline-date">2017 - 2019[cite: 1]</span>
+                <ul>
+                    <li>Managed daily business operations[cite: 1].</li>
+                    <li>Supervised staff and customer service[cite: 1].</li>
+                    <li>Handled administrative and financial activities[cite: 1].</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Professional Experience & Organizational Involvement -->
-    <section id="experience">
-        <h2 class="section-title">Experience & Involvements</h2>
-        <p class="section-subtitle">Leadership roles, academic IT posts, and community work</p>
+    <!-- Technical Skills & Expertise -->
+    <section id="skills">
+        <h2 class="section-title">Technical Expertise & Skills</h2>
+        <p class="section-subtitle">Core competencies and system tool proficiency</p>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <h4>IT Head / System Administrator / Exam Department Head</h4>
-                <span>Herald International College</span>
+        <div class="grid-2">
+            <div class="card">
+                <h3><i class="fa-solid fa-server"></i> Core IT & Management Skills</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">System Administration</span>
+                    <span class="skill-tag">IT Infrastructure Management</span>
+                    <span class="skill-tag">Technical Support</span>
+                    <span class="skill-tag">Database Management</span>
+                    <span class="skill-tag">IT Operations</span>
+                    <span class="skill-tag">Hardware & Software Maintenance</span>
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">Public Speaking</span>
+                    <span class="skill-tag">Event Management</span>
+                </div>
             </div>
-            <div class="timeline-item">
-                <h4>IT Head</h4>
-                <span>Urbana School of Science</span>
-            </div>
-            <div class="timeline-item">
-                <h4>System Administrator</h4>
-                <span>Insoft Research & Development</span>
-            </div>
-            <div class="timeline-item">
-                <h4>President (2022-23)</h4>
-                <span>Lions Club of Pokhara Birauta Century</span>
-            </div>
-            <div class="timeline-item">
-                <h4>Leadership Roles (Secretary, CSD, IT Officer, General Member)</h4>
-                <span>Rotaract Club of Pokhara Midtown</span>
-            </div>
-            <div class="timeline-item">
-                <h4>Committee Member</h4>
-                <span>Nepal Student Union La Grandee</span>
-            </div>
-            <div class="timeline-item">
-                <h4>Software Technician</h4>
-                <span>Macrotech Computech</span>
-            </div>
-            <div class="timeline-item">
-                <h4>President</h4>
-                <span>Children Yuwa Club (Ward No 17, Birauta, Pokhara)</span>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-code"></i> Databases & Tools</h3>
+                <div class="skills-container" style="margin-bottom: 1.5rem;">
+                    <span class="skill-tag">SQL Server</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Microsoft Office</span>
+                    <span class="skill-tag">System Maintenance</span>
+                    <span class="skill-tag">User Support</span>
+                </div>
+                <h3><i class="fa-solid fa-language"></i> Languages</h3>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">
+                    <strong>Nepali:</strong> Read, Write, Speak[cite: 1]<br>
+                    <strong>English:</strong> Read, Write, Speak[cite: 1]<br>
+                    <strong>Hindi:</strong> Read, Speak[cite: 1]
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">My Project Works</h2>
-        <p class="section-subtitle">A showcase of systems, applications, and web platforms I have built</p>
+        <h2 class="section-title">Project Works</h2>
+        <p class="section-subtitle">Applications and systems built to date</p>
 
         <div class="projects-grid">
-            <!-- Project 1 -->
             <div class="project-card">
-                <img src="./images/tiffin_box.jpeg" alt="TiffinBox" class="project-img">
-                <div class="project-info">
-                    <span class="project-tag">Web Development</span>
-                    <h4>TiffinBox</h4>
+                <div>
+                    <span class="project-tag">System Application</span>
+                    <h4>Movie Ticket Management System</h4>
                 </div>
             </div>
-
-            <!-- Project 2 -->
             <div class="project-card">
-                <img src="./images/movie.jpg" alt="Movie Management System" class="project-img">
-                <div class="project-info">
-                    <span class="project-tag">Desktop App Development</span>
-                    <h4>Movie Management System</h4>
+                <div>
+                    <span class="project-tag">Web Application</span>
+                    <h4>Online Food Ordering System</h4>
                 </div>
             </div>
-
-            <!-- Project 3 -->
             <div class="project-card">
-                <img src="./images/college.jpg" alt="Management Software" class="project-img">
-                <div class="project-info">
-                    <span class="project-tag">Desktop App Development</span>
-                    <h4>Management Software</h4>
+                <div>
+                    <span class="project-tag">Management Software</span>
+                    <h4>College Management System</h4>
                 </div>
             </div>
-
-            <!-- Project 4 -->
             <div class="project-card">
-                <img src="./images/dine.jpeg" alt="Dine-Ease" class="project-img">
-                <div class="project-info">
-                    <span class="project-tag">Android Development</span>
-                    <h4>Dine-Ease</h4>
+                <div>
+                    <span class="project-tag">Desktop Application</span>
+                    <h4>Food Ordering Desktop Application</h4>
                 </div>
+            </div>
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Mobile Application</span>
+                    <h4>My-Med (Doctor Appointment Application)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Involvements & Leadership -->
+    <section id="involvements">
+        <h2 class="section-title">Community & Leadership</h2>
+        <p class="section-subtitle">Organizations, community development, and youth initiatives</p>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3><i class="fa-solid fa-users"></i> Community Involvements</h3>
+                <ul style="list-style-type: disc; margin-left: 1.2rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li>Rotaract Club of Pokhara Midtown - RI District 3292[cite: 1]</li>
+                    <li>Lions Club of Pokhara Birauta Century - District 325 B1[cite: 1]</li>
+                    <li>Alternative Service Community Organization Nepal - Bikalpa Nepal[cite: 1]</li>
+                    <li>Youth Club Birauta - Ward No 17, Pokhara[cite: 1]</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-award"></i> Leadership & Impact</h3>
+                <p style="color: var(--text-secondary);">
+                    Held senior executive and leadership positions in multiple academic, professional, and community-based organizations. Experienced in event management, program hosting, public speaking, and team coordination[cite: 1]. Spearheaded local initiatives providing structured mentorship, academic support, and personal development programs for orphaned children to foster long-term success[cite: 1].
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Let's connect for collaborations, business, or technical inquiries</p>
+        <h2 class="section-title">Contact Information</h2>
+        <p class="section-subtitle">Get in touch for opportunities and collaborations</p>
 
         <div class="contact-grid">
             <div class="contact-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Location</h4>
+                <p>Koteshwor-32, Kathmandu, Nepal[cite: 1]</p>
+            </div>
+            <div class="contact-card">
                 <i class="fa-solid fa-phone"></i>
-                <h4>Call Me On</h4>
-                <p>+977 9816637548</p>
+                <h4>Phone Numbers</h4>
+                <p>+977 9816637548 / +977 9763253537[cite: 1]</p>
             </div>
             <div class="contact-card">
                 <i class="fa-solid fa-envelope"></i>
-                <h4>Email Me At</h4>
-                <p><a href="mailto:roshan@bhattarair.com.np">roshan@bhattarair.com.np</a></p>
+                <h4>Email Addresses</h4>
+                <p>unikguru123@gmail.com<br>roshanrotaract0423@gmail.com[cite: 1]</p>
             </div>
         </div>
     </section>
