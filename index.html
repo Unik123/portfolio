@@ -315,8 +315,8 @@
             gap: 0.8rem;
         }
 
-        /* CV Download & Inquiry Showcase Banner */
-        .cv-showcase-section {
+        /* Featured Highlight / Services Section (Replaced CV Section) */
+        .services-showcase {
             background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
             border: 1px solid var(--accent);
             border-radius: 24px;
@@ -328,7 +328,7 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-glow);
         }
 
-        .cv-showcase-section::before {
+        .services-showcase::before {
             content: '';
             position: absolute;
             top: -50px;
@@ -341,97 +341,54 @@
             border-radius: 50%;
         }
 
-        .cv-showcase-grid {
+        .services-grid-inner {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             position: relative;
             z-index: 2;
+            margin-top: 2rem;
         }
 
-        .cv-info h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .cv-info p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .cv-features-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            margin-bottom: 2rem;
-        }
-
-        .cv-feature-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .cv-feature-item i {
-            color: var(--accent);
-            font-size: 1.1rem;
-        }
-
-        .cv-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .cv-preview-card {
-            background: rgba(15, 23, 42, 0.8);
+        .service-box {
+            background: rgba(15, 23, 42, 0.75);
             border: 1px solid var(--border);
+            padding: 2rem;
             border-radius: 16px;
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: var(--transition);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 1.2rem;
-            transition: var(--transition);
+            gap: 1rem;
         }
 
-        .cv-preview-card:hover {
+        .service-box:hover {
             border-color: var(--accent);
-            transform: translateY(-4px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .cv-icon-badge {
-            width: 70px;
-            height: 70px;
+        .service-icon {
+            width: 50px;
+            height: 50px;
             background: var(--accent-glow);
-            border: 2px solid var(--accent);
-            border-radius: 50%;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--accent);
-            font-size: 1.8rem;
-            box-shadow: 0 0 20px var(--accent-glow);
+            font-size: 1.3rem;
         }
 
-        .cv-preview-card h4 {
-            font-size: 1.3rem;
+        .service-box h4 {
+            font-size: 1.2rem;
             color: var(--text-primary);
         }
 
-        .cv-preview-card p {
+        .service-box p {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Skills Tags */
@@ -800,7 +757,7 @@
             .btn-group {
                 justify-content: center;
             }
-            .grid-2, .contact-container, .cv-showcase-grid {
+            .grid-2, .contact-container {
                 grid-template-columns: 1fr;
             }
             .nav-links {
@@ -837,10 +794,10 @@
             <a href="#" class="logo">Roshan Bhattarai</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link" style="color: var(--accent);">Expertise</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#cv-download" class="nav-link" style="color: var(--accent);">Download CV</a></li>
                 <li><a href="#involvements" class="nav-link">Involvements</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -858,7 +815,7 @@
             <p>IT Professional with a Bachelor's degree in Computer Application (BCA) and practical experience in System Administration, IT Operations, Technical Support, Examination Management, and Technology Leadership.</p>
             <div class="btn-group">
                 <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> View Projects</a>
-                <a href="#cv-download" class="btn btn-outline"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+                <a href="#services" class="btn btn-outline"><i class="fa-solid fa-layer-group"></i> Explore Expertise</a>
             </div>
         </div>
         <div class="hero-image">
@@ -868,45 +825,31 @@
         </div>
     </section>
 
-    <!-- Attractive CV Download & Inquiry Section -->
-    <section id="cv-download">
-        <div class="cv-showcase-section">
-            <div class="cv-showcase-grid">
-                <div class="cv-info">
-                    <h2>Looking for a Detailed Professional Resume?</h2>
-                    <p>Download my comprehensive, date-wise updated CV containing complete educational history, institutional system administration background, tech stack, and corporate leadership profile.</p>
-                    
-                    <div class="cv-features-list">
-                        <div class="cv-feature-item">
-                            <i class="fa-solid fa-circle-check"></i> Complete work history with precise dates
-                        </div>
-                        <div class="cv-feature-item">
-                            <i class="fa-solid fa-circle-check"></i> BCA academic credentials & professional certificates
-                        </div>
-                        <div class="cv-feature-item">
-                            <i class="fa-solid fa-circle-check"></i> Technical skills, tools, and language proficiencies
-                        </div>
-                    </div>
+    <!-- Professional Core Competencies / Services Showcase (Replaced CV Section) -->
+    <section id="services">
+        <div class="services-showcase">
+            <div style="text-align: center; position: relative; z-index: 2;">
+                <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary);">Core Competencies & Services</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Delivering robust infrastructure, institutional administration, and technical solutions built for scale and efficiency.</p>
+            </div>
 
-                    <div class="cv-actions">
-                        <a href="Roshan Bhattarai Latest Date Wise CV_2.pdf" download="Roshan_Bhattarai_CV.pdf" class="btn btn-primary">
-                            <i class="fa-solid fa-download"></i> Download CV (PDF)
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <i class="fa-solid fa-paper-plane"></i> Quick Inquiry
-                        </a>
-                    </div>
+            <div class="services-grid-inner">
+                <div class="service-box">
+                    <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                    <h4>System Administration</h4>
+                    <p>Managing server environments, user authentication, infrastructure stability, and core system maintenance.</p>
                 </div>
 
-                <div class="cv-preview-card">
-                    <div class="cv-icon-badge">
-                        <i class="fa-solid fa-file-pdf"></i>
-                    </div>
-                    <h4>Roshan Bhattarai - CV</h4>
-                    <p>PDF Document • Date-wise Updated<br>Ready for institutional review</p>
-                    <a href="Roshan Bhattarai Latest Date Wise CV_2.pdf" download="Roshan_Bhattarai_CV.pdf" style="color: var(--accent); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem;">
-                        <span>Get Document</span> <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                <div class="service-box">
+                    <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h4>IT Operations & Support</h4>
+                    <p>Streamlining institutional workflows, software deployment, troubleshooting, and end-user technical support.</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon"><i class="fa-solid fa-school-flag"></i></div>
+                    <h4>Institutional Management</h4>
+                    <p>Leading academic technology initiatives, examination management systems, and cross-departmental operations.</p>
                 </div>
             </div>
         </div>
@@ -1202,7 +1145,7 @@
             <div class="contact-intro-card">
                 <div>
                     <h3>Let's Build Something Great Together</h3>
-                    <p>Whether you have a question about IT infrastructure management, institutional operations, or want to download my CV and discuss a potential collaboration, my inbox is always open.</p>
+                    <p>Whether you have a question about IT infrastructure management, institutional operations, or want to discuss a potential collaboration, my inbox is always open.</p>
                 </div>
                 
                 <div class="contact-details-list">
@@ -1229,18 +1172,20 @@
                     </div>
                 </div>
 
-
+                <div class="social-connect">
+                    <a href="#" class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-icon-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon-btn"><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </div>
 
             <div class="contact-action-box">
                 <h3>Direct Inquiry</h3>
-                <p>Click below to open your preferred email client and send a message directly to my inbox, or download my official CV above.</p>
+                <p>Click below to open your preferred email client and send a message directly to my inbox.</p>
                 <div style="display: flex; flex-direction: column; gap: 1rem;">
                     <a href="mailto:unikguru123@gmail.com?subject=Portfolio%20Inquiry%20from%20Visitor&body=Hi%20Roshan,%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding..." class="direct-email-btn">
                         <i class="fa-solid fa-paper-plane"></i> Send Direct Email
-                    </a>
-                    <a href="Roshan Bhattarai Latest Date Wise CV_2.pdf" download="Roshan_Bhattarai_CV.pdf" class="btn btn-outline" style="justify-content: center; padding: 0.9rem;">
-                        <i class="fa-solid fa-file-arrow-down"></i> Download CV File
                     </a>
                 </div>
             </div>
